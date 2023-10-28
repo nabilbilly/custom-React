@@ -51,33 +51,34 @@ function NavBar() {
               <Nav className="me-auto">
                 <Nav.Link href="#product" className={activeLink === 'home' ? 'active navbar-link':'navbar-link'} onClick={() => onUpdateLink('home')}>Product</Nav.Link>
                 {/* <Nav.Link href="#solution">Solution</Nav.Link> */}
-                <NavDropdown title='Solution' id="basic-nav-dropdown">
-                  <Dropdown id="basic-nav-dropdown" >
-                    <Dropdown.Item href="#/action-1">Contribute</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">General participation </Dropdown.Item>
+                
+                <NavDropdown title='Solution' id="nav-dropdown-white-example" className="custom-dropdown" >
+                  <Dropdown title='Solution' id="basic-nav-dropdown" >
+                    <Dropdown.Item  href="#/action-1" >Contribute</Dropdown.Item><Dropdown.Divider />
+                    <Dropdown.Item href="#/action-2">General participation </Dropdown.Item><Dropdown.Divider />
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                   </Dropdown>
                 </NavDropdown>
                 {/* <Nav.Link href="#solution"> */}
-                <NavDropdown title='Problems' id="basic-nav-dropdown">
+                <NavDropdown title='Problems' id="basic-nav-dropdown" className="custom-dropdown">
                   <Dropdown id="basic-nav-dropdown" >
-                    <Dropdown.Item href="#/action-1">Post Error</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">Post Error</Dropdown.Item><Dropdown.Divider />
+                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item><Dropdown.Divider />
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                   </Dropdown>
                 </NavDropdown>
                 {/* </Nav.Link> */}
-                <NavDropdown title='Community' id="basic-nav-dropdown">
+                <NavDropdown title='Community' id="basic-nav-dropdown" className="custom-dropdown">
                   <Dropdown id="basic-nav-dropdown" >
-                    <Dropdown.Item href="#/action-1">comment</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">cloud review</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">comment</Dropdown.Item><Dropdown.Divider />
+                    <Dropdown.Item href="#/action-2">cloud review</Dropdown.Item><Dropdown.Divider />
                     <Dropdown.Item href="#/action-3">Join Community</Dropdown.Item>
                   </Dropdown>
                 </NavDropdown>
-                <NavDropdown title='Open Source' id="basic-nav-dropdown">
+                <NavDropdown title='Open Source' id="basic-nav-dropdown" className="custom-dropdown">
                   <Dropdown id="basic-nav-dropdown" >
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item><Dropdown.Divider />
+                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item><Dropdown.Divider />
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                   </Dropdown>
                 </NavDropdown>

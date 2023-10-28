@@ -1,17 +1,120 @@
+
+
+/* --------------CSS effect on Default tag/ element example(html,*,body,a,h1-h6,ul,button,ol,p,li,img) ------------------- */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body{
-  margin: 0;
-  padding: 0;
-  top: 0;
-  box-sizing: border-box;
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 75px;
 }
 
-button {
+body{
+ overflow-x: hidden;
+ background-color: #121212 !important;
+ color: #fff;
+ font-weight: 400px;
+ position: relative;
+ font-family: 'Centra', sans-serif !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p,a,ul,li,ol{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+button{
+  border: 0;
+  background-color: transparent;
+}
+p.sccess{
+  color: green;
+}
+p.danger{
+  color: red;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+
+/* ------------------------------------------------- NavBar css Effects includes ( )--------------------------- */
+.navbar{
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
+}
+
+.navbar .scrolled{
+  padding: 0;
+  background-color: #121212;
+}
+
+/* .navbar a .navbar-brand{
+  width: 9%;
+} */
+
+.NavDropdown{
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+
+.navbar .navbar-nav .nav-link.navbar-link,.custom-dropdown .nav-link {
+  font-weight: 300;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 16px;
+  opacity: 0.75;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active,
+.custom-dropdown .nav-link:hover,
+.custom-dropdown .nav-link.active {
+    opacity: 1;
+}
+
+span.navbar-text {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-text button {
   border: none;
   display: block;
   position: relative;
@@ -27,7 +130,7 @@ button {
   font-weight: 500;
 }
 
-button span {
+.navbar-text button span {
   position: absolute;
   left: 0;
   top: 0;
@@ -38,7 +141,7 @@ button span {
   border: 4px solid royalblue;
 }
 
-button span::before {
+.navbar-text button span::before {
   content: "";
   display: block;
   position: absolute;
@@ -51,57 +154,19 @@ button span::before {
   transition: all 0.3s;
 }
 
-button:hover span::before {
+.navbar-text button:hover span::before {
   transform: translate(-50%, -50%) rotate(-90deg);
   width: 100%;
   background: royalblue;
 }
 
-button:hover {
+.navbar-text button:hover {
   color: white;
 }
 
-button:active span::before {
+.navbar-text button:active span::before {
   background: #2751cd;
 }
 
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 
