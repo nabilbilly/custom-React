@@ -8,6 +8,7 @@ function NavBar() {
   //  making use of the useState Hooks
     const[activeLink,setactiveLink]=useState('home');
     const[scrolled,seScrolled]=useState(false);
+    const[IsNavOpen,setIsNavOpen] = useState(false);
 
 
     useEffect(()=>{
@@ -29,26 +30,30 @@ function NavBar() {
       setactiveLink(value)
     }
 
-
-
+    const Truetoggle = () => {
+      setIsNavOpen(!IsNavOpen);
+    }
 
   return (
     <div className="">  
         {/* NavBar section as a logo,product,Solution(dropdown),Problem(dropdown),community(dropdown),open source(dropdown),and Pricing  */}
-         <Navbar expand="lg" className={scrolled ? "scrolled":""}>                        {/* The className prop is being used to conditionally apply a CSS class based on the scrolled state. The expression {scrolled ? "scrolled" : ""} is a ternary operator. It checks the value of the scrolled state. If scrolled is true, it sets the class to "scrolled," and if it's false, it sets it to an empty string (no class).              */}
+         <Navbar expand="lg" className={`${IsNavOpen ? 'navbar-open' : ''} ${scrolled ? 'scrolled' : ''}`} >                        {/* The className prop is being used to conditionally apply a CSS class based on the scrolled state. The expression {scrolled ? "scrolled" : ""} is a ternary operator. It checks the value of the scrolled state. If scrolled is true, it sets the class to "scrolled," and if it's false, it sets it to an empty string (no class).              */}
           <Container>
 
             <Navbar.Brand href="#home">
               <img src={""} alt='logo'/>
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav" >
-              <span className='navbar-toggle-icon'></span>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={Truetoggle} >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+              {/* <span className='navbar-toggle-icon'></span> */}
             </Navbar.Toggle>
 
 
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+            <Navbar.Collapse id="basic-navbar-nav" className={`me-auto ${IsNavOpen ? 'navbar-collapse-custom' : ''}`}>
+              <Nav className="me-auto"  >
                 <Nav.Link href="#product" className={activeLink === 'home' ? 'active navbar-link':'navbar-link'} onClick={() => onUpdateLink('home')}>Product</Nav.Link>
                 {/* <Nav.Link href="#solution">Solution</Nav.Link> */}
                 
