@@ -2,7 +2,7 @@
 // import { useState,useEffect } from "react";
 import React, { useState,useEffect }  from 'react';
 import { Row,Container,Col } from "react-bootstrap";
-import Headerimage from '../images/img/header-img.svg';
+import Headerimage from '../images/img/accelerate.svg';
 
 
 
@@ -56,9 +56,14 @@ function Context() {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline"> We Welcome your Errors</span>
-                        <h1>{" Hi! Let's build from here "} <br></br> <span className="wrap">{text} </span></h1>
-                        <p>Our platform,fosters knowledge sharing and collaboration through questions, expertise sharing, and learning opportunities...</p>
-                        <br></br><br></br>
+                        <h1>{"Hi!Let's build from here"} <br></br> <span className="wrap">{text} </span></h1>
+                        <p>Our platform,fosters knowledge sharing and collaboration through questions, expertise sharing, and learning opportunities... </p>
+                        <div class="three-body">
+                            <div className="three-body__dot"></div>
+                            <div className="three-body__dot"></div>
+                            <div className="three-body__dot"></div>
+                        </div> <br></br>
+                                     
                         <button className="button" onClick={() => (console.log('connect'))}>
                             <span></span>
                             <span></span>
@@ -66,8 +71,14 @@ function Context() {
                             <span></span>
                             <span>Create&nbsp;Post</span>
                         </button>
+
                     </Col>
                     <Col xs={12} md={6} xl={5}>
+                        <div className="three-body">
+                            <div className="three-body__dot"></div>
+                            <div className="three-body__dot"></div>
+                            <div className="three-body__dot"></div>
+                        </div>
                        <img src={Headerimage} alt="header img"></img>
                     </Col>
                     
