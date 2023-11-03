@@ -56,15 +56,15 @@ function Context() {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline"> We Welcome your Errors</span>
-                        <h1>{"Hi!Let's build from here"} <br></br> <span className="wrap">{text} </span></h1>
+                        <h1>{"Hi!Let's build from here"}  <span className="wrap">{text} </span></h1>
                         <p>Our platform,fosters knowledge sharing and collaboration through questions, expertise sharing, and learning opportunities... </p>
                         <div class="three-body">
                             <div className="three-body__dot"></div>
                             <div className="three-body__dot"></div>
                             <div className="three-body__dot"></div>
-                        </div> <br></br>
+                        </div> <br></br><br></br>
                                      
-                        <button className="button" onClick={() => (console.log('connect'))}>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button className="button" onClick={() => (console.log('connect'))}>
                             <span></span>
                             <span></span>
                             <span></span>

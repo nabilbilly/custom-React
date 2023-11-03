@@ -1,3 +1,58 @@
+/* media Query */
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 576px) {
+  .banner img {
+    display: none;
+  }
+
+}
+/* Small Devices (Tablets): 577 pixels to 768 pixels  */
+@media (min-width: 577px) and (max-width: 768px) {
+  .banner img {
+    display: none;
+  }
+  
+}
+
+ /* Styles for medium devices (laptops) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .banner img {
+    display: none;
+  }
+}
+
+/* Styles for large devices (desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  
+}
+
+  /* Styles for extra large devices (large desktops) */
+@media (min-width: 1201px) {
+
+}
+
+ /* Styles for high-density (Retina) displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+ 
+}
+
+@media (orientation: portrait) {
+  /* Styles for portrait orientation */
+}
+
+@media (orientation: landscape) {
+  /* Styles for landscape orientation */
+}
+
+
+
+
+
+
+
+
+
+
 /* The Css style of this page start fron line 105. this just animation */
 .three-body {
   --uib-size: 35px;
@@ -115,7 +170,7 @@ html{
 
 body{
  overflow-x: hidden;
- background-color: #121212 !important;
+ background-color: #131313 !important;
  color: #fff;
  font-weight: 400px;
  position: relative;
@@ -449,3 +504,122 @@ span.navbar-text {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+
+
+/* -------------------- Endorsement Section Start from here ----------------------------- */
+
+.endorse{
+  padding: 0 0 40px 0;
+  position: relative;
+
+}
+
+.endorse-feild{
+  background-color: #151515;
+  border-radius: 1px;
+  text-align: center;
+  padding: 60px 50px;
+  
+}
+.endorse h4{
+  font-size: 45px;
+}
+
+.endorse .item img{
+  width: 50%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.be-comment-block {
+  margin-bottom: 50px !important;
+  border: 1px solid #edeff2;
+  border-radius: 2px;
+  padding: 50px 70px;
+  border:1px solid #ffffff;
+}
+
+.comments-title {
+  font-size: 16px;
+  color: #edeff2;
+  margin-bottom: 15px;
+  font-family: 'Conv_helveticaneuecyr-bold';
+}
+
+.be-img-comment {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-bottom: 15px;
+}
+
+/* This is the image border */
+.be-ava-comment {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* keeps the comment content inline */
+.be-comment-content {
+  margin-left: 80px;
+}
+
+/* Hold both the dev name and time in an inline block display mode */
+.be-comment-content span {
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 15px;
+}
+
+/* as the name sugguest developes name */
+.be-comment-name {
+  font-size: 13px;
+  font-family: 'Conv_helveticaneuecyr-bold';
+}
+.be-comment-content a {
+  color: #edeff2;
+}
+
+.be-comment-content span {
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 15px;
+}
+
+.be-comment-time {
+  text-align: right;
+}
+
+.be-comment-time {
+  font-size: 11px;
+  color: #b4b7c1;
+}
+
+.be-comment-text {
+  font-size: 13px;
+  line-height: 18px;
+  color: #7a8192;
+  display: block;
+  background: #f6f6f7;
+  border: 1px solid #edeff2;
+  border-radius: 10px;
+  padding: 15px 20px 20px 20px;
+}
+
+
+

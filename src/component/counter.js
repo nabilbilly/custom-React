@@ -1,6 +1,6 @@
 // import React, { useState, usesEffect } from "react" allows you to make use of the hooks in react;
 import React, { useState,useEffect }  from 'react';
-import { Navbar, Container, Nav, NavDropdown ,Dropdown} from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown ,Dropdown } from 'react-bootstrap';
 
 // Overall, this component appears to be a navigation bar that can change its appearance based on whether the user has scrolled the page. The active link and scroll state are managed with hooks, and an event listener is set up to track scrolling behavior. The component may render the navigation elements and style them based on the scrolled state.
 
@@ -9,7 +9,7 @@ function NavBar() {
     const[activeLink,setactiveLink]=useState('home');
     const[scrolled,seScrolled]=useState(false);
     const[IsNavOpen,setIsNavOpen] = useState(false);
-
+  
 
     useEffect(()=>{
       const onScroll = () =>{
@@ -92,13 +92,9 @@ function NavBar() {
                 <Nav.Link href="#pricing"  className={activeLink === 'home' ? 'active navbar-link':'navbar-link'} onClick={() => onUpdateLink('pricing')}>Pricing</Nav.Link>
               </Nav>
               <span className='navbar-text'>
-                <div className='social-icon'>
-                  <a href=''> <img src={''} alt=''></img></a>
-                  <a href=''> <img src={''} alt=''></img></a>
-                  <a href=''> <img src={''} alt=''></img></a>
-                  <a href=''> <img src={''} alt=''></img></a>
-                </div>
-               <button className='btnn' onClick={() => (console.log('connect'))} >Join Community <span> </span> </button>
+              {/* <Button className='buttonjoinC' variant="primary" onClick={handleShow}><span> </span> </Button> */}
+
+               <button className='btnn' onClick={() => (console.log('connect'))} >Join Community<span> </span> </button>
               </span>
             </Navbar.Collapse>
       </Container>
