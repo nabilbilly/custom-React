@@ -41,16 +41,18 @@ const Chat = () => {
     <>
       <div className="container">
           
-          <div className='content-header'>
-             <div className='headen'> 
-               <div class="loader"><span></span></div>
-               <h3>How Our Platform Works</h3>
-             </div>  
-             <div className='headen-content'>
-              <div class="vertical-line"></div>
-               <h2>Ask questions, sharing answers, and connecting with a vast community of experts. Navigate a wealth of information with ease, tailor your content, and stay up-to-date. Engage with an inclusive community dedicated to fostering collaboration, personal growth, and problem-solving.</h2>
-             </div>
-         </div>
+        <div className='content-header'>
+          <div className='headen'> 
+            <div class="loader"><span></span></div>
+            <h3>How Our Platform Works</h3>
+          </div> 
+
+          <div className='headen-content'>
+            <div class="vertical-line"></div>
+            <h2>Ask questions, sharing answers, and connecting with a vast community of experts. Navigate a wealth of information with ease, tailor your content, and stay up-to-date. Engage with an inclusive community dedicated to fostering collaboration, personal growth, and problem-solving.</h2>
+          </div>
+        </div>
+        
         <div className="be-comment-block">
           <h1 className="comments-title">Problems </h1>
           <div className="be-comment">

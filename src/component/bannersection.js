@@ -1,5 +1,3 @@
-// import React from "react";
-// import { useState,useEffect } from "react";
 import React, { useState,useEffect }  from 'react';
 import { Row,Container,Col } from "react-bootstrap";
 import Headerimage from '../images/img/accelerate.svg';
@@ -7,14 +5,15 @@ import Headerimage from '../images/img/accelerate.svg';
 
 
 function Context() {
+    //comments Here ------->                           
     const[loopNum,SetLoopNum]=useState(0);                                                                        // This state deals with loop and iteration and  will indicat the index of the string as to which word is currently displayed
-    const[isDelating,SetIsDeleting]=useState(false);                                                              // This state detect if a word is deleted or not
+    const[isDelating,SetIsDeleting]=useState(false);                                                              //After the Text is been typed out it clears or delete  This state detect if a word is deleted or not
     const toRotate = ["Find Answers to Errors","Share Your Experience","Help Jr Dev's","join Open conversations"]; // list of words that we will be displaying 
     const[text,setText]=useState("");                                                                              // this state will locate the potion of the word(text) that is been displayed.
     const[ Delta,SetDelta] = useState(300 - Math.random() * 100);                                                 // The time inteval between each words
     const period = 1000;                                                                                          // indicate how much time between one letter is been typed out as example 'dev' d comes followed by e in 2s folowed by v in the next two seconds.
 
-    //UesEffect is responsible or typing or deleting 
+    //UesEffect is responsible for typing or deleting 
     useEffect(() =>{
         let ticker = setInterval(() => {
             loopTextEffect();
@@ -51,7 +50,8 @@ function Context() {
         }
     }
     return(
-        <section className="banner" id="home">     // class
+        // This page as been divided into to colums one holds the (message Typing animation and the button ) while the other hold (the Accelerate Airplane image)
+        <section className="banner" id="home">  
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>

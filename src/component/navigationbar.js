@@ -35,28 +35,27 @@ function NavBar() {
     }
 
   return (
-    <div className="">  
-        {/* NavBar section as a logo,product,Solution(dropdown),Problem(dropdown),community(dropdown),open source(dropdown),and Pricing  */}
-         <Navbar expand="lg" className={`${IsNavOpen ? 'navbar-open' : ''} ${scrolled ? 'scrolled' : ''}`} >                        {/* The className prop is being used to conditionally apply a CSS class based on the scrolled state. The expression {scrolled ? "scrolled" : ""} is a ternary operator. It checks the value of the scrolled state. If scrolled is true, it sets the class to "scrolled," and if it's false, it sets it to an empty string (no class).              */}
-          <Container>
-
+    <>  
+      {/* NavBar section has a logo,product,Solution(dropdown),Problem(dropdown),community(dropdown),open source(dropdown),and Pricing  */}
+      <Navbar expand="lg" className={`${IsNavOpen ? 'navbar-open' : ''} ${scrolled ? 'scrolled' : ''}`} >                        {/* The className prop is being used to conditionally apply a CSS class based on the scrolled state. The expression {scrolled ? "scrolled" : ""} is a ternary operator. It checks the value of the scrolled state. If scrolled is true, it sets the class to "scrolled," and if it's false, it sets it to an empty string (no class).              */}
+        <Container>
+                   {/* NavBar Logo */}
             <Navbar.Brand href="#home">
               <img src={""} alt='logo'/>
             </Navbar.Brand>
-
-            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={Truetoggle} >
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-              {/* <span className='navbar-toggle-icon'></span> */}
+                                                            {/* Hamburgar Menu */}
+            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={Truetoggle} >     
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
             </Navbar.Toggle>
 
-
+                                                               {/* Dropdown Section and their title */}
             <Navbar.Collapse id="basic-navbar-nav" className={`me-auto ${IsNavOpen ? 'navbar-collapse-custom' : ''}`}>
               <Nav className="me-auto"  >
+
                 <Nav.Link href="#product" className={activeLink === 'home' ? 'active navbar-link':'navbar-link'} onClick={() => onUpdateLink('home')}>Product</Nav.Link>
-                {/* <Nav.Link href="#solution">Solution</Nav.Link> */}
-                
+                                                                {/* <Title="#Solution"> */}
                 <NavDropdown title='Solution' id="nav-dropdown-white-example" className="custom-dropdown" >
                   <Dropdown title='Solution' id="basic-nav-dropdown" >
                     <Dropdown.Item  href="#/action-1" >Contribute</Dropdown.Item><Dropdown.Divider />
@@ -64,7 +63,7 @@ function NavBar() {
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                   </Dropdown>
                 </NavDropdown>
-                {/* <Nav.Link href="#solution"> */}
+                                                                {/* <Title="#Problems"> */}
                 <NavDropdown title='Problems' id="basic-nav-dropdown" className="custom-dropdown">
                   <Dropdown id="basic-nav-dropdown" >
                     <Dropdown.Item href="#/action-1">Post Error</Dropdown.Item><Dropdown.Divider />
@@ -72,7 +71,7 @@ function NavBar() {
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                   </Dropdown>
                 </NavDropdown>
-                {/* </Nav.Link> */}
+                                                                  {/* <Title="#Community"> */} 
                 <NavDropdown title='Community' id="basic-nav-dropdown" className="custom-dropdown">
                   <Dropdown id="basic-nav-dropdown" >
                     <Dropdown.Item href="#/action-1">comment</Dropdown.Item><Dropdown.Divider />
@@ -80,6 +79,7 @@ function NavBar() {
                     <Dropdown.Item href="#/action-3">Join Community</Dropdown.Item>
                   </Dropdown>
                 </NavDropdown>
+                                                                   {/* <Title="#Open Source"> */}
                 <NavDropdown title='Open Source' id="basic-nav-dropdown" className="custom-dropdown">
                   <Dropdown id="basic-nav-dropdown" >
                     <Dropdown.Item href="#/action-1">Action</Dropdown.Item><Dropdown.Divider />
@@ -87,20 +87,16 @@ function NavBar() {
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                   </Dropdown>
                 </NavDropdown>
-               
-                {/* <Nav.Link href="#open-source">Open Source</Nav.Link> */}
+                                                                    {/* <Title="#Pricing"> */}
                 <Nav.Link href="#pricing"  className={activeLink === 'home' ? 'active navbar-link':'navbar-link'} onClick={() => onUpdateLink('pricing')}>Pricing</Nav.Link>
               </Nav>
-              <span className='navbar-text'>
-              {/* <Button className='buttonjoinC' variant="primary" onClick={handleShow}><span> </span> </Button> */}
-
-               <button className='btnn' onClick={() => (console.log('connect'))} >Join Community<span> </span> </button>
-              </span>
+                <span className='navbar-text'>
+                  <button className='btnn' onClick={() => (console.log('connect'))} >Join Community<span> </span> </button>
+                </span>
             </Navbar.Collapse>
-      </Container>
-    </Navbar>
-    </div>
+        </Container>
+      </Navbar>
+    </>
   );
 };
-
 export default NavBar;

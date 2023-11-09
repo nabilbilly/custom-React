@@ -17,7 +17,7 @@ import Vs from '../images/img/sponsers/vscode-insiders-svgrepo-com (1).svg';
 
 
 function Endorse() {
-
+    // When screen gets larger or smaller the item display is shown here 
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -38,7 +38,7 @@ function Endorse() {
         }
     };
     return(
-        <>
+        <> 
             <section className="endorse" id="endorse">
                 <Container>
                     <Row>
