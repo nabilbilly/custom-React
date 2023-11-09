@@ -51,14 +51,14 @@ function Context() {
         }
     }
     return(
-        <section className="banner" id="home">
+        <section className="banner" id="home">     // class
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline"> We Welcome your Errors</span>
                         <h1>{"Hi!Let's build from here"}  <span className="wrap">{text} </span></h1>
                         <p>Our platform,fosters knowledge sharing and collaboration through questions, expertise sharing, and learning opportunities... </p>
-                        <div class="three-body">
+                        <div className="three-body">
                             <div className="three-body__dot"></div>
                             <div className="three-body__dot"></div>
                             <div className="three-body__dot"></div>
