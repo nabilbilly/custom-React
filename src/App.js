@@ -6,6 +6,7 @@ import NavBar from './component/navigationbar';
 import Banner from './component/bannersection';
 import TrustedCompany from './component/endorsementsection';
 import About from './component/about';
+import Fields from './component/experts'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
      <Banner/>
      <TrustedCompany/>
      <About/>
+     <Fields/>
     
     </div>
   );
