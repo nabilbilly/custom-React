@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import image8 from '../images/img/cs6.jpeg'
+import image9 from '../images/img/cs8.png'
+import image10 from '../images/img/cs7.jpg'
 
 const Chat = () => {
   const FirstDevToType = [ " Recently, I started to explore the world of React,I created a new React project using 'npx create-react-app' & it ended up in an Error. <span style='color:red;'>Error Message : ENOENT Error: npm is having trouble finding a directory/npm ERR! enoent ENOENT: no such file or directory, lstat 'C:\Users\your\AppData\Roaming\npm'</span>"];
@@ -38,7 +41,7 @@ const Chat = () => {
   }, []);
 
   return (
-    <>
+    <>  
       <div className="container">
           
         <div className='content-header'>
@@ -52,13 +55,13 @@ const Chat = () => {
             <h2>Ask questions, sharing answers, and connecting with a vast community of experts. Navigate a wealth of information with ease, tailor your content, and stay up-to-date. Engage with an inclusive community dedicated to fostering collaboration, personal growth, and problem-solving.</h2>
           </div>
         </div>
-        
+
         <div className="be-comment-block">
           <h1 className="comments-title">Problems </h1>
           <div className="be-comment">
             <div className="be-img-comment">
               <a href="blog-detail-2.html">
-                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="dev-0" className="be-ava-comment" />
+                <img src={image10} alt="dev-0" className="be-ava-comment" />
               📍
               </a>
             </div>
@@ -80,7 +83,7 @@ const Chat = () => {
           <div className="be-comment">
             <div className="be-img-comment">
               <a href="blog-detail-2.html">
-                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="dev-1" className="be-ava-comment" />
+                <img src={image9} alt="dev-1" className="be-ava-comment" />
               📍
               </a>
             </div>
@@ -100,7 +103,7 @@ const Chat = () => {
           <div className="be-comment">
             <div className="be-img-comment">
               <a href="blog-detail-2.html">
-                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="dev-2" className="be-ava-comment" />
+                <img src={image8} alt="dev-2" className="be-ava-comment" />
                 📍
               </a>
             </div>

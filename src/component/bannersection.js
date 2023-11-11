@@ -49,6 +49,7 @@ function Context() {
 
         }
     }
+    
     return(
         // This page as been divided into to colums one holds the (message Typing animation and the button ) while the other hold (the Accelerate Airplane image)
         <section className="banner" id="home">  
@@ -64,7 +65,7 @@ function Context() {
                             <div className="three-body__dot"></div>
                         </div> <br></br><br></br>
                                      
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button className="button" onClick={() => (console.log('connect'))}>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button className="button" >
                             <span></span>
                             <span></span>
                             <span></span>
