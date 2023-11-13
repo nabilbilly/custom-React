@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function Expectation{
+export default function Expectation(){
     return(
         <>
          <section className="Expectations">

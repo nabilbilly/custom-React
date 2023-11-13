@@ -6,7 +6,8 @@ import NavBar from './component/navigationbar';
 import Banner from './component/bannersection';
 import TrustedCompany from './component/endorsementsection';
 import About from './component/about';
-import Fields from './component/experts'
+import Fields from './component/Expert'
+// import Fields from './component/experts'
 
 function App() {
   return (
