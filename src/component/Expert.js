@@ -1,5 +1,9 @@
 import React from "react";
 import { Container,Row,Col } from "react-bootstrap";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+// images import
 import Verify from '../images/img/sponsers/store-verified-shopping-svgrepo-com.svg'
 import Cloud from '../images/img/sponsers/cloud-computing-svgrepo-com.svg'
 import Microsoft from '../images/img/sponsers/microsoft-svgrepo-com.svg'
@@ -7,12 +11,30 @@ import Progrmming from '../images/img/sponsers/programming-svgrepo-com.svg'
 import Security from '../images/img/sponsers/security-open-access-unlock-svgrepo-com.svg'
 import Database from '../images/img/sponsers/database-svgrepo-com.svg'
 import Networking from '../images/img/sponsers/network-share-svgrepo-com.svg'
+import AI from '../images/img/sponsers/robots-robot-svgrepo-com.svg'
 
 import { Data, Data2, Data3 } from './ExpertframeData';
 
-// import AI from '../images/img/sponsers/robots-robot-svgrepo-com.svg'
+// Scroll animation 
+const boxVariant = {
+    visible: { opacity: 1, scale: 1,x:0, transition: { duration: 0.6, type: 'easeInOut', stiffness: 120 }  },
+    hidden: { opacity: 0, scale: 0,x: -200 ,transition: { duration: 0.6, type: 'easeInOut', stiffness: 120 } }
+  };
+
+
 
 export default function List(){
+    // Scroll Animation
+    const control = useAnimation();
+    const [ref, inView] = useInView({ threshold: 0.3 });
+    
+        useEffect(() => {
+          if (inView) {
+            control.start("visible");
+          } else {
+            control.start("hidden");
+          }
+        }, [control, inView]);
     
     // Col 2 Return value and this represent the Expert Frame  section
     const ListItems = Data.map((data) => (
@@ -84,7 +106,7 @@ export default function List(){
 
     return(
         <>
-            <section className="choice-field">
+            <motion.section className="choice-field" ref={ref} variants={boxVariant} initial="hidden" animate={control}>
                 <Container>
                     <Row>
                         <Col xs={12} md={6} xl={5}>
@@ -94,6 +116,12 @@ export default function List(){
                             </div>
                             <br></br>
                             <div className="field">
+                                <button class="button-field">
+                                    <span class="button_lg">
+                                        <span class="button_text"> <img src={AI} alt="verify" className="field-image"></img> AI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+                                    </span>
+                                </button>
+
                                 <button class="button-field">
                                     <span class="button_lg">
                                         <span class="button_text"> <img src={Cloud} alt="verify" className="field-image"></img> Cloud &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>
@@ -130,11 +158,7 @@ export default function List(){
                                     </span>
                                 </button>
 
-                                {/* <button class="button-field">
-                                    <span class="button_lg">
-                                        <span class="button_text"> <img src={AI} alt="verify" className="field-image"></img> AI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
-                                    </span>
-                                </button>*/}
+                                
                             </div> 
 
                         </Col>
@@ -159,8 +183,11 @@ export default function List(){
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </motion.section>
         </>
     )
 
 }
+
+
+// website for animation https://blog.logrocket.com/react-scroll-animations-framer-motion/#adding-scroll-reveal-functionality

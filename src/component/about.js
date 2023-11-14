@@ -52,7 +52,7 @@ const Chat = () => {
 
           <div className='headen-content'>
             <div class="vertical-line"></div>
-            <h2>Ask questions, sharing answers, and connecting with a vast community of experts. Navigate a wealth of information with ease, tailor your content, and stay up-to-date. Engage with an inclusive community dedicated to fostering collaboration, personal growth, and problem-solving.</h2>
+            <h2><span >Ask questions, sharing answers, and connecting with a vast community of experts</span>. Navigate a wealth of information with ease, tailor your content, and stay up-to-date. Engage with an inclusive community dedicated to fostering collaboration, personal growth, and problem-solving.</h2>
           </div>
         </div>
 

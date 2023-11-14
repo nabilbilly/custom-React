@@ -60,7 +60,11 @@ input:focus, textarea:focus, select:focus {
 		padding: 0 150px;
 	}
 }
-
+#mix-color{
+  background: -webkit-linear-gradient(120deg,#7400b8,#ff00f7,#00d0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* ------------------------------------------------- NavBar css Effects includes ( )--------------------------- */
 .navbar{
@@ -573,6 +577,12 @@ span.navbar-text {
   display: flex;
   padding-right: 230px;
 }
+
+.headen-content h2 span{
+  background: -webkit-linear-gradient(120deg,#7400b8,#ff00f7,#00d0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .vertical-line {
   position: relative;
   height: 300px;
@@ -580,6 +590,8 @@ span.navbar-text {
   margin-top: 10px;
   margin-left: 70px;
 }
+
+
 
 .vertical-line::before {
   content: "";
@@ -694,6 +706,13 @@ span.navbar-text {
   border-radius: 10px;
   padding: 15px 20px 20px 20px;
 }
+
+
+
+
+
+
+
 /* 
 .choice-field{
   --color: rgba(114, 114, 114, 0.3);
@@ -707,7 +726,7 @@ span.navbar-text {
  
   .choice-field{
     /* background-color: #101010; */
-    
+      padding-bottom: 100px;
       background: linear-gradient(to left,#121212 ,#101010, #000000);
     
   }
@@ -852,4 +871,114 @@ box-shadow: 0px 0px 17px #000000;
 
 .expert-frame2,.expert-frame3{
   margin-top: 45px;
+}
+
+/* ********** expertation ******** */
+.expectation{
+  cursor: move;
+  background: linear-gradient(to right, #131313, hsla(0, 0%, 7%, 0.067), #000000);
+  position: relative;
+  color: white;
+  padding: 1rem;
+  
+}
+.expectations-h4 { 
+  padding-top: 60px;
+  padding-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: -webkit-linear-gradient(120deg,#ff00f7,#00d0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.expectations {
+  display: flex;
+  /* T R B L */
+  padding-bottom:50px ;
+}
+
+.expectations .resource {
+  position: relative;
+  flex: 1;
+  margin: 12px;
+  text-align: center; /* Align text content to the center */
+}
+
+.expectations ul {
+  padding: 0;
+}
+
+.expectations .resource ul li {
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.expectations .resource img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px; /* Add some space below the image */
+}
+
+.expectations h4 {
+  font-size: 24px; /* Adjust the font size for h4 */
+  margin-bottom: 8px; /* Add some space below the heading */
+}
+
+.expectations h5 {
+  font-size: 18px; /* Adjust the font size for h5 */
+  margin-bottom: 8px; /* Add some space below the heading */
+}
+
+.expectations h6 {
+  font-size: 14px; /* Adjust the font size for h6 */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+ .expectations-h4 { 
+   padding-top: 60px;
+   padding-bottom: 50px;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+  justify-items: center;
+   padding-left: 30px;
+   
+ }
+  .expectations {
+    padding: 50px 0 25px 20px; /* Adjust padding for smaller screens */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align items in the center horizontally */
+    text-align: center; /* Align text content to the center */
+  }
+
+  .expectations .resource {
+    margin: 12px 0;
+  }
+}
+
+.whereabout{
+  display: flex;
+  padding-bottom:50px ;
+  justify-content: center;
+}
+
+.percentage{
+  position: relative;
+  flex: 1;
+  margin: 12px;
+  text-align: center; 
+}
+
+.percentage h3{
+  font-size: 28px; 
+  margin-bottom: 8px;
+}
+
+.percentage h5{
+  font-size: 13px; 
+  
 }
